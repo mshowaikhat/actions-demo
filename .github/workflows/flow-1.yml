@@ -1,0 +1,16 @@
+name: first workflow
+
+on: push
+
+jobs:
+    job-one:
+        runs-on: ubuntu-latest
+        steps:
+        - name: start-message
+          run: echo "STARTING..."
+
+        - name: list-files
+          run: ls
+
+        - name: read-readme
+          run: cat README.md
