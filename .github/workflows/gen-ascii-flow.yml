@@ -14,11 +14,7 @@ jobs:
       - name: Install cowsay
         run: sudo apt-get install cowsay -y
 
-      - name: Generate ASCII dragon
-        run: |
-          echo "Generating ASCII dragon..."
-          cowsay -f dragon "RUN for cover, ..." >> dragon.txt
-          cat dragon.txt
-          ls -ltra
+      - name: excute ASCII dragon script
+        run: ./gen-ascii-script.sh
 
     
