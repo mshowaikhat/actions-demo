@@ -4,7 +4,7 @@ on:
   push
 
 jobs:
-  gen-ascii:
+  run-gen-ascii:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,9 +13,6 @@ jobs:
 
       - name: Install cowsay
         run: sudo apt-get install cowsay -y
-        
-      - name: list-files 
-        run: ls -ltra
 
       - name: Make script executable
         run: chmod +x gen-ascii-script.sh
@@ -23,4 +20,21 @@ jobs:
       - name: execute ASCII dragon script
         run: ./gen-ascii-script.sh
 
-    
+      - name: sleeping 5s
+        run: sleep 5
+
+  test-gen-ascii:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: list-files 
+        run: grep -i "dragon" dragon.txt
+
+
+  deploy-gen-ascii:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: read-file
+        uses: cat dragon.txt
+
