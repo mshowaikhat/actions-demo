@@ -1,0 +1,24 @@
+name: Generate ASCII Dragon
+
+on:
+  push
+
+jobs:
+  gen-ascii:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install cowsay
+        run: sudo apt-get install cowsay -y
+
+      - name: Generate ASCII dragon
+        run: |
+          echo "Generating ASCII dragon..."
+          cowsay -f dragon "RUN for cover, ..." >> dragon.txt
+          cat dragon.txt
+          ls -ltra
+
+    

@@ -15,8 +15,8 @@ jobs:
             ls -ltra
             cat README.md
             
-        - name: gen-ASCII
-          run: cowsay -f dragon "RUN for cover, ..." >> dragon.txt
+        # - name: gen-ASCII
+        #   run: cowsay -f dragon "RUN for cover, ..." >> dragon.txt
         
           # - name: list-files
         #   run: ls
