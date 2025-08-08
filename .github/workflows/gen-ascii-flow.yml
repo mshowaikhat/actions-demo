@@ -36,5 +36,5 @@ jobs:
 
     steps:
       - name: read-file
-        uses: cat dragon.txt
+        run: cat dragon.txt
 
