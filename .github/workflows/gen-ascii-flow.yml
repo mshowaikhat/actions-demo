@@ -13,8 +13,14 @@ jobs:
 
       - name: Install cowsay
         run: sudo apt-get install cowsay -y
+        
+      - name: list-files 
+        run: ls -ltra
 
-      - name: excute ASCII dragon script
+      - name: Make script executable
+        run: chmod +x gen-ascii-script.sh
+
+      - name: execute ASCII dragon script
         run: ./gen-ascii-script.sh
 
     
