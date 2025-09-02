@@ -27,9 +27,8 @@ jobs:
           path: dragon.txt
 
   test-gen-ascii:
-        needs: build-gen-ascii
-        runs-on: ubuntu-latest
-
+    needs: build-gen-ascii
+    runs-on: ubuntu-latest
     steps:
       - name: dowload dragon.txt artifacts
         uses: actions/download-artifact@v4
