@@ -34,12 +34,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dragon-text
-          
+
       - name : list-files
         run: ls -ltra 
 
-      - name: find-dragon-word 
-        run: grep -i "dragon" dragon.txt
+      - name: find-cover-word 
+        run: grep -i "cover" dragon.txt
 
 
   deploy-gen-ascii:
