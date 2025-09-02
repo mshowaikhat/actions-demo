@@ -1,0 +1,23 @@
+# name: first workflow
+# on: push
+# jobs:
+#     job-one:
+#         runs-on: ubuntu-latest
+#         steps:
+#         - name: checkout-repo
+#           uses: actions/checkout@v4
+
+#         - name: list-read-files
+#           run: |
+#             echo "STARTING..."
+#             ls -ltra
+#             cat README.md
+            
+#         # - name: gen-ASCII
+#         #   run: cowsay -f dragon "RUN for cover, ..." >> dragon.txt
+        
+#           # - name: list-files
+#         #   run: ls
+
+#         # - name: read-readme
+#         #   run: cat README.md
