@@ -4,7 +4,7 @@ on:
   push
 
 jobs:
-  run-gen-ascii:
+  build-gen-ascii:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +24,7 @@ jobs:
         run: sleep 5
 
   test-gen-ascii:
+    needs: build-gen-ascii
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +33,7 @@ jobs:
 
 
   deploy-gen-ascii:
+    needs: test-gen-ascii
     runs-on: ubuntu-latest
 
     steps:
